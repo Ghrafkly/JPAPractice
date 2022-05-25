@@ -1,22 +1,21 @@
-package com.fdm.onetoone;
+package com.fdm.oneToOne;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-public class Game {
+public class BoardGame {
     @Id
     @GeneratedValue
     private int id;
     private String name;
     private double rating;
+    @OneToOne
+    private Publisher publisher;
 
-    public Game() {
+    public BoardGame() {
     }
 
-    public Game(int id, String name, double rating) {
-        this.id = id;
+    public BoardGame(String name, double rating) {
         this.name = name;
         this.rating = rating;
     }
@@ -33,8 +32,8 @@ public class Game {
         return rating;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Publisher getPublisher() {
+        return publisher;
     }
 
     public void setName(String name) {
@@ -43,6 +42,10 @@ public class Game {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     @Override

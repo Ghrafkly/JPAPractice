@@ -1,4 +1,4 @@
-package com.fdm.JBDCDemo;
+package com.fdm;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
