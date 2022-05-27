@@ -14,7 +14,6 @@ public class Planet {
     private int id;
     private String name;
     private boolean habitable;
-
     @ManyToOne
     private Star star;
 

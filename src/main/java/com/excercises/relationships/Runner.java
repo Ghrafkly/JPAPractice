@@ -12,7 +12,7 @@ import java.util.List;
 @SuppressWarnings("unchecked")
 public class Runner {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("DataAccess");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAPractice");
         EntityManager em = emf.createEntityManager();
 
         Stream softDev = new Stream("Software Development");

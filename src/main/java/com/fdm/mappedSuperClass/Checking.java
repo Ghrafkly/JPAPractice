@@ -3,17 +3,17 @@ package com.fdm.mappedSuperClass;
 import jakarta.persistence.Entity;
 
 @Entity
-public class CheckingAccount extends Account {
+public class Checking extends Account {
     private double minBal;
 
-    public CheckingAccount() {
+    public Checking() {
     }
 
-    public CheckingAccount(double balance) {
+    public Checking(double balance) {
         super(balance);
     }
 
-    public CheckingAccount(double minBal, double balance) {
+    public Checking(double minBal, double balance) {
         super(balance);
         this.minBal = minBal;
     }
